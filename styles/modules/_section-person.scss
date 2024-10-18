@@ -1,0 +1,78 @@
+.section-person{
+    position: relative;
+    background-image: url(../assets/person_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 200vh;
+
+    .for-persons{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 32px 32px;
+        padding: 56px 32px;
+        background-color: rgba(0,85,164,0.9);
+        width: 40%;
+        max-width: 580px;
+
+        h3{
+            z-index: 0;
+            font-family: 'Bebas Neue',sans-serif;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: none;
+            line-height: 1.2;
+            letter-spacing: normal;
+            color: rgba(255,255,255,1);
+            text-align: left;
+        }
+
+        ul{
+            margin-top: 2.5rem;
+            li{
+                font-family: proxima-nova,sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: none;
+                line-height: 1.6;
+                letter-spacing: normal;
+                color: rgba(255,255,255,1);
+                margin-left: 36px;
+                margin-right: 0px;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        button{
+            appearance: none;
+            border: 0;
+            margin: 2.5rem auto 0;
+            display: block;
+            border-radius: 0.2em;
+            padding-top: 9px;
+            padding-left: 17px;
+            padding-right: 17px;
+            padding-bottom: 5px;
+            font-family: 'Bebas Neue',sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: none;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-decoration: none;
+            text-align: center;
+            color: rgba(0,17,26,1);
+            background-color: rgba(255,255,255,1);
+        }
+
+        @media screen and (max-width: 768px){
+            width: 80%;
+        }
+    }
+}

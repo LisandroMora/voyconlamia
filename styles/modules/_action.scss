@@ -1,0 +1,95 @@
+.section-action{
+    .container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        min-height: 100vh;
+        .left-item{
+
+            &.show{
+                animation: leftIn .8s ease-in-out;
+            }
+        }
+        .right-item{
+            padding: 2.5rem 25%;
+            &.show{
+                animation: fade-in .8s ease-in-out;
+            }
+            ul{
+                margin-top: 2.5rem;
+                li{
+                    font-family: proxima-nova,sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-transform: none;
+                    line-height: 1.6;
+                    letter-spacing: normal;
+                    color: rgba(255,255,255,1);
+                    margin-left: 36px;
+                    margin-right: 0px;
+                    margin-bottom: 0.5rem;
+
+                    .btn{
+                        color: black;
+                        background-color: white;
+                        border-radius: 5px;
+                        padding: 9px 17px 5px;
+                        border: none;
+                        font-size: 20px;
+                        font-weight: 400;
+                        font-family: 'Bebas Neue', sans-serif;
+                        &.show{
+                            animation: rightIn .7s ease-in-out;
+                        }
+                    }
+                }
+            }
+            blockquote{
+                z-index: 0;
+                position: relative;
+                font-family: proxima-nova,sans-serif;
+                font-size: 25px;
+                font-style: italic;
+                font-weight: 400;
+                text-transform: none;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: rgba(255,255,255,1);
+                text-align: left;
+                margin-top: 2.5rem;
+                padding-top: 0.25em;
+                padding-bottom: 0.25em;
+                padding-left: 1em;
+                padding-right: 1em;
+
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    z-index: -1;
+                    position: absolute;
+                    top: 0px;
+                    right: auto;
+                    bottom: 0px;
+                    left: 0px;
+                    width: 5px;
+                    background-color: rgba(167,223,253,0.9);
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 1fr;
+
+            .left-item{
+                background-size: contain;
+            }
+            .right-item{
+                padding: 1rem 30px;
+                blockquote{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

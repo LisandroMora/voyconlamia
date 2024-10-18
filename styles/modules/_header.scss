@@ -1,0 +1,165 @@
+header{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    .clouds{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: 0;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 768px){
+            height: 80px;
+        }
+    }
+
+    .header-logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .images-container{
+            position: relative;
+            width: 400px;
+            height: 640px;
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &.logo-empty{
+                    opacity: 0;
+                    transform: translate(-52%, -48%);
+                    animation: disapear 4.5s ease-in-out;
+                }
+            }
+            .blue-bg{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 400px;
+                height: 0px;
+                background-color: #0055a4;
+                animation: fill 5s ease-in-out;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            top: 70%;
+            .images-container{
+                width: 230px;
+                height: 410px;
+                img{
+                    width: 230px;
+                    height: 410px;
+
+                    &.logo-empty{
+                        width: 261px;
+                        height: 406px;
+                        transform: translate(-52%, -48%);
+                    }
+                }
+                .blue-bg{
+                    width: 230px;
+                }
+            }
+        }
+
+        @media screen and (max-height: 850px){
+            top: 60%;
+
+            .images-container{
+                width: 300px;
+                height: 480px;
+                img{
+                    width: 300px;
+                    height: 480px;
+
+                    &.logo-empty{
+                        width: 330px;
+                        height: 475px;
+                        transform: translate(-52%, -48%);
+                    }
+                }
+                .blue-bg{
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    .top-logos{
+        width: 100%;
+        position: absolute;
+        top: 200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+        img{
+            &:nth-of-type(1){
+                width: 100px;
+                height: 100px;
+            }
+            &:nth-of-type(2){
+                height: 100px;
+            }
+        }
+
+        &.show{
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @media screen and (max-width: 768px){
+            top: 150px;
+        }
+    }
+
+    nav{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 12px 40px;
+        width: 100%;
+        transform: translateY(-50px);
+        transition: transform .3s ease-in-out;
+        height: 30px;
+        &::before{
+            content: '';
+            position: absolute;
+            opacity: 1;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 155px;
+            background: linear-gradient(to bottom,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 85%);
+        }
+        &:hover{
+            transform: translateY(0);
+        }
+        img{
+            height: 36px;
+        }
+
+        &.bg-active{
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            background-color: white;
+            transform: translateY(0);
+            height: 60px;
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

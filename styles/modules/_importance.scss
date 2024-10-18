@@ -1,0 +1,71 @@
+.section-importance{
+    min-height: 100vh;
+    .container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .left-item{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 2.5rem 25%;
+            &.show{
+                animation: leftIn .8s ease-in-out;
+            }
+            h2{
+                font-family: 'Bebas Neue',sans-serif;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: none;
+                line-height: 1.2;
+                letter-spacing: normal;
+                color: rgba(255,255,255,1);
+                text-align: left;
+            }
+
+            p{
+                font-family: proxima-nova,sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: none;
+                line-height: 1.6;
+                letter-spacing: normal;
+                color: rgba(255,255,255,1);
+            }
+
+            ul{
+                li{
+                    font-family: proxima-nova,sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    text-transform: none;
+                    line-height: 1.4;
+                    letter-spacing: normal;
+                    color: rgba(255,255,255,1);
+                    text-align: left;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+
+        .right-item{
+            background-image: url(../assets/bottles_bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            &.show{
+                animation: fade-in .8s ease-in;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 0.5fr;
+            .left-item{
+                padding: 1rem 30px;
+            }
+        }
+    }
+}

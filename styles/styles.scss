@@ -1,0 +1,85 @@
+@import 'modules/header';
+@import 'modules/info';
+@import 'modules/importance';
+@import 'modules/combat';
+@import 'modules/action';
+@import 'modules/section-instruction';
+@import 'modules/section-person';
+@import 'modules/footer';
+@import 'modules/animations';
+@import 'modules/section-videos';
+@import 'modules/modal-unete';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0,85,164,1);
+    color: white;
+    overflow-x: hidden;
+}
+
+h2{
+    width: 100%;
+    font-family: 'Bebas Neue',sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: rgba(255,255,255,1);
+    text-align: left;
+
+    &.title-separator{
+        padding: 5rem 25%;
+
+        &.counter{
+            text-align: center;
+        }
+    }
+}
+
+h4{
+    font-family: proxima-nova,sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: none;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: rgba(255,255,255,1);
+    text-align: left;
+}
+
+p{
+    width: 100%;
+    font-family: proxima-nova,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: rgba(255,255,255,1);
+}
+
+.btn{
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    color: black;
+    &:hover{
+        filter: brightness(.8)
+    }
+}
+
+@media screen and (max-width: 768px){
+    h2.title-separator{
+        font-size: 40px;
+        padding: 50px 30px;
+    }
+}
